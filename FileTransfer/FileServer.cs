@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    class MQServer
+    class FileServer
     {
-        public MQServer(int port_id)
+        private RequestSocket MQ_Sender;
+        private ResponseSocket MQ_Receiver;
+        public FileServer(int port_id)
         {
 
         }
