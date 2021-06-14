@@ -3,7 +3,7 @@ using NetMQ.Sockets;
 using System;
 using System.IO;
 using System.Runtime.CompilerServices;
-
+using System.Windows;
 
 namespace MMWSoftware
 {
@@ -65,9 +65,13 @@ namespace MMWSoftware
 
         public String recv_file(String base_path)
         {
+            MessageBox.Show("Hello1");
             var filename = this.recv_string();
+            MessageBox.Show(filename + "Hello2");
             var buffer = this.recv_bytes();
+            MessageBox.Show("Hello3");
             File.WriteAllBytes(base_path + filename, buffer);
+            MessageBox.Show("Hello4");
             return filename;
         }
 
