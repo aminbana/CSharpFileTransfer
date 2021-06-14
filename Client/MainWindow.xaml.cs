@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -35,8 +36,16 @@ namespace Client
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             lbl1.Content = "Start ...";
-            client_sock.recv_file("E:/");
-            lbl1.Content = "Success";
+
+            while (true)
+            {
+                var filename = client_sock.recv_file("E:/");
+                Thread.Sleep(1000);
+                MessageBox.Show("Received " + filename);
+                lbl1.Content = "Success";
+            }
+            
+            
         }
     }
 }

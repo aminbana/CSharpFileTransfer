@@ -57,7 +57,6 @@ namespace MMWSoftware
         {
             byte[] buffer = File.ReadAllBytes(file_path);
             var filename = Path.GetFileName(file_path);
-            MessageBox.Show("server sent " + filename + "String");
             var msg = this.send_string(filename);
 
             return this.send_bytes(buffer);
@@ -67,13 +66,9 @@ namespace MMWSoftware
 
         public String recv_file(String base_path)
         {
-            MessageBox.Show("Hello1");
             var filename = this.recv_string();
-            MessageBox.Show(filename + "Hello2");
             var buffer = this.recv_bytes();
-            MessageBox.Show("Hello3"+ base_path + filename);
             File.WriteAllBytes(base_path + filename, buffer);
-            MessageBox.Show("Hello4");
             return filename;
         }
 

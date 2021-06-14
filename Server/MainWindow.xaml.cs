@@ -1,6 +1,7 @@
 ﻿using MMWSoftware;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,14 @@ namespace Server
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            sock.send_file("C:/20200217_1239_.npy");
+            string[] filePaths = Directory.GetFiles("C:/Users/Amin/Desktop/Wallpapers/");
+            
+            foreach (String file in filePaths)
+            {
+                MessageBox.Show(file);
+                sock.send_file(file);
+            } 
+            
         }
     }
 }
