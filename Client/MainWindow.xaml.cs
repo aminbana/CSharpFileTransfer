@@ -1,6 +1,7 @@
 ﻿using MMWSoftware;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -36,14 +37,15 @@ namespace Client
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             lbl1.Content = "Start ...";
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
 
-            while (true)
+            for (int i = 0; i < 19; i++)
             {
                 var filename = client_sock.recv_file("E:/");
-                Thread.Sleep(1000);
-                MessageBox.Show("Received " + filename);
                 lbl1.Content = "Success";
             }
+            MessageBox.Show("sent in " + watch.ElapsedMilliseconds + " ms");
             
             
         }
