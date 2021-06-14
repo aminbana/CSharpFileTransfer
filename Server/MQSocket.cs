@@ -71,7 +71,7 @@ namespace MMWSoftware
             var filename = this.recv_string();
             MessageBox.Show(filename + "Hello2");
             var buffer = this.recv_bytes();
-            MessageBox.Show("Hello3");
+            MessageBox.Show("Hello3"+ base_path + filename);
             File.WriteAllBytes(base_path + filename, buffer);
             MessageBox.Show("Hello4");
             return filename;
