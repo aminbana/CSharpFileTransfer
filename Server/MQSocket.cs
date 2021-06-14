@@ -57,7 +57,9 @@ namespace MMWSoftware
         {
             byte[] buffer = File.ReadAllBytes(file_path);
             var filename = Path.GetFileName(file_path);
+            MessageBox.Show("server sent " + filename + "String");
             var msg = this.send_string(filename);
+
             return this.send_bytes(buffer);
 
 

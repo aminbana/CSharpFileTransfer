@@ -35,7 +35,7 @@ namespace Client
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             lbl1.Content = "Start ...";
-            client_sock.recv_file("C:/");
+            client_sock.recv_file("E:/");
             lbl1.Content = "Success";
         }
     }
