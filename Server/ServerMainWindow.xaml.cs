@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MMWSoftware;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Client
+namespace Server
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,6 +28,7 @@ namespace Client
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            new MQSocket(6661, false, "127.0.0.1");
 
         }
     }

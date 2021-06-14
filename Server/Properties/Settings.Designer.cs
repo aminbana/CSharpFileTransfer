@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FileTransfer.Properties
+namespace Server.Properties
 {
 
 

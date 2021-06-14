@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16D8B05A-9C7A-48A9-9B14-5930CA8F77B8}</ProjectGuid>
+    <ProjectGuid>{07ABDCF9-F0DC-4A2D-B282-162E56944ABD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FileTransfer</RootNamespace>
-    <AssemblyName>FileTransfer</AssemblyName>
+    <RootNamespace>Server</RootNamespace>
+    <AssemblyName>Server</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -98,7 +98,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MQServer.cs" />
+    <Compile Include="MQSocket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
